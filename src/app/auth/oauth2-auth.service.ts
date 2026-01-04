@@ -50,8 +50,8 @@ export class Oauth2AuthService {
     from(this.keycloak.init({
       flow: "standard",
       onLoad: "check-sso",
-      redirectUri: "http://localhost:4200/",
-      silentCheckSsoRedirectUri: window.location.origin + "/assets/silentCheckSsoRedirectUri.html",
+      redirectUri: "https://whatsappui.onrender.com/",
+      silentCheckSsoRedirectUri: "https://whatsappui.onrender.com/assets/silentCheckSsoRedirectUri.html",
     }))
       .subscribe(isAuthenticated => {
         if (isAuthenticated) {
